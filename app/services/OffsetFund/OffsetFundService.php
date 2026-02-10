@@ -250,17 +250,7 @@ class OffsetFundService
         if (!$limit_obj) {
             throw new AppException('Лимит для данной категории отсутствует.');
         }
-        $offset_fund_total_values = 0.0;
-
-        $funds = OffsetFund::find([
-            'columns' => 'id, total_value',
-            'conditions' => 'ref_fund_key_id = :k: AND user_id = :u:',
-            'bind' => ['k' => $ref_fund_key_id, 'u' => $user->id],
-        ]);
-
-        foreach ($funds as $f) {
-            $offset_fund_total_values += (float)str_replace(',', '.',  $f->total_value);
-        }
+        $offset_fund_total_values = $this->repository->getUsedLimitValue((int) $ref_fund_key_id, (int) $user->id);
 
         $limit_value = $limit_obj->value;
 

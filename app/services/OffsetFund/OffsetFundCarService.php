@@ -75,9 +75,11 @@ class OffsetFundCarService
     {
         $offset_fund = $this->getFundOrFail($fund_id);
         $ref_fund_key = $offset_fund->ref_fund_key;
-        $vehicle_type = $query_params['vehicle_type'];
-        if(str_contains($ref_fund_key->name, 'TRACTOR') || str_contains($ref_fund_key->name, 'COMBAIN')){
-            $vehicle_type = "AGRO";
+        $is_special_machinery = $ref_fund_key && $this->isAgroFundKey($ref_fund_key->name);
+
+        $vehicle_type = $query_params['vehicle_type'] ?? 'UNKNOWN';
+        if ($is_special_machinery) {
+            $vehicle_type = 'AGRO';
         }
 
         // $user = User::findFirstById($offset_fund->user_id); // Не использовался в оригинале явно, но оставил для контекста
@@ -116,11 +118,11 @@ class OffsetFundCarService
         } else {
 
             if($vehicle_type == 'AGRO'){
-                $id_code = $query_params['id_code'];
-                $body_code = $query_params['body_code'];
+                $id_code = $query_params['id_code'] ?? '';
+                $body_code = $query_params['body_code'] ?? '';
                 $vin = preg_replace('/[^\p{L}\p{N}]+/u', '', $id_code) . '&' . $body_code;
             }else{
-                $vin = $query_params['vin'];
+                $vin = $query_params['vin'] ?? '';
             }
 
             $current_data = [
@@ -138,9 +140,7 @@ class OffsetFundCarService
             ];
         }
 
-        $is_special_machinery = false;
-        if ($offset_fund->ref_fund_key && (str_contains($offset_fund->ref_fund_key->name, 'TRACTOR') || str_contains($offset_fund->ref_fund_key->name, 'COMBAIN'))) {
-            $is_special_machinery = true;
+        if ($is_special_machinery) {
             $ref_car_cats = RefCarCat::find(["conditions" => "id IN (13, 14)"]);
             $ref_car_types = RefCarType::find(["conditions" => "id IN (4, 5)"]);
         } else {
@@ -155,10 +155,6 @@ class OffsetFundCarService
         }
 
         if (!empty($current_data['vin'])) {
-            $fund_owner = User::findFirstById($offset_fund->user_id);
-
-            // $integration_data = $this->integration_service->getCarData($fund_owner, $current_data['vin'], $user);
-
             if (!empty($integration_data)) {
                 $current_data['date_import'] = $integration_data['operation_date'] ?? $current_data['date_import'];
                 $current_data['production_year'] = $integration_data['year'] ?? $current_data['production_year'];
@@ -280,26 +276,28 @@ class OffsetFundCarService
      */
     public function checkOffsetFundCarLimit($offset_fund, $current_value = 0, $car_id = null): void
     {
-        if ($current_value) {
-            $offset_fund_cars_total_volume = (float)OffsetFundCar::sum([
-                'column' => 'volume',
-                'conditions' => 'offset_fund_id = :offset_fund_id: AND id != :car_id:',
-                'bind' => [
-                    'offset_fund_id' => (int)$offset_fund->id,
-                    'car_id' => (int)$car_id,
-                ],
-            ]) ?: 0.0;
-
-
-            $available_value = $offset_fund->total_value - $offset_fund_cars_total_volume;
-
-            if ($available_value < 0) {
-                $available_value = 0;
-            }
-
-            if ($offset_fund->total_value < $offset_fund_cars_total_volume + $current_value) {
-                throw new AppException("Лимит превышен! Доступно: " . $available_value);
-            }
+        if (!$current_value) {
+            return;
         }
+
+        $offset_fund_cars_total_volume = $this->repository->getUsedCarVolume(
+            (int) $offset_fund->id,
+            $car_id !== null ? (int) $car_id : null
+        );
+
+        $available_value = (float) $offset_fund->total_value - $offset_fund_cars_total_volume;
+
+        if ($available_value < 0) {
+            $available_value = 0;
+        }
+
+        if ((float) $offset_fund->total_value < ($offset_fund_cars_total_volume + (float) $current_value)) {
+            throw new AppException("Лимит превышен! Доступно: " . $available_value);
+        }
+    }
+
+    private function isAgroFundKey(string $fundKeyName): bool
+    {
+        return str_contains($fundKeyName, 'TRACTOR') || str_contains($fundKeyName, 'COMBAIN');
     }
 }
