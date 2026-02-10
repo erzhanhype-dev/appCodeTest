@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приложение 5</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            /*font-family: 'Open Sans', sans-serif;*/
+            font-family: "DejaVu Sans", sans-serif;
+            font-size: 14px;
+        }
+        table {
+            width: 100%;
+            border-right: 1px solid #dddddd;
+            border-bottom: 1px solid #dddddd;
+        }
+        td {
+            padding: 10px;
+            border-top: 1px solid #dddddd;
+            border-left: 1px solid #dddddd;
+        }
+        td:first-child {
+            text-align: center;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .ss {
+            font-size: 12px;
+        }
+        .page-break {
+            page-break-after: always;
+        }
+        h4 {
+            text-transform: uppercase;
+            text-align: center;
+        }
+        u {
+            text-decoration: none;
+            border-bottom: 1px solid #222;
+        }
+    </style>
+</head>
+<body>
+    <div style="float: right;">
+        <p class="ss">
+            Приложение 5<br/>
+            к Правилам стимулирования<br/>
+            производства в Республике<br/>
+            Казахстан экологически<br/>
+            чистых автомобильных<br/>
+            транспортных средств<br/>
+            (соответствующих<br/>
+            экологическому<br/>
+            классу 4 и выше; с<br/>
+            электродвигателями) и их<br/>
+            компонентов, а также самоходной<br/>
+            сельскохозяйственной техники,<br/>
+            соответствующей экологическим<br/>
+            требованиям, определенным<br/>
+            техническими регламентами<br/><br/>
+            Форма
+        </p>
+    </div>
+    <div style="clear: both;"></div>
+    <h4 class="text-center">
+        Расчет финансирования части затрат на осуществление научно-<br/>
+        исследовательских и опытно-конструкторских работ
+    </h4>
+    <p>
+        Наименование организации <u>[FUND_FROM]</u><br/>
+        Место нахождения <u>[FUND_ADDRESS]</u><br/>
+        БИН (ИИН) <u>[FUND_IDNUM]</u> ОКЭД <u>[FUND_OKED]</u> Кбе <u>[FUND_KBE]</u> БИК <u>[FUND_BIK]</u><br/>
+        Свидетельство о регистрации <u>[FUND_REG_NUM]</u>
+    </p>
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                <td>
+                    Оплата труда работников,<br/>
+                    участвующих в выполнении<br/>
+                    научно-исследовательских и<br/>
+                    опытно-конструкторских<br/>
+                    работ, за период выполнения<br/>
+                    этими работниками<br/>
+                    указанных работ (тенге)
+                </td>
+                <td>
+                    Материальные<br/>
+                    расходы,<br/>
+                    непосредственно<br/>
+                    связанные с<br/>
+                    выполнением научно-<br/>
+                    исследовательских и<br/>
+                    опытно-<br/>
+                    конструкторских<br/>
+                    работ (тенге)
+                </td>
+                <td>
+                    Стоимость работ по<br/>
+                    договорам о выполнении<br/>
+                    научно-исследовательских и<br/>
+                    опытно-конструкторских<br/>
+                    работ в случае выполнения<br/>
+                    работ в иных научно-<br/>
+                    исследовательских<br/>
+                    организациях (тенге)
+                </td>
+                <td>
+                    Сумма<br/>
+                    фактически<br/>
+                    понесенных<br/>
+                    затрат,<br/>
+                    подлежащих<br/>
+                    возмещению и<br/>
+                    выплате (тенге)
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>А</td>
+                <td>Б</td>
+                <td>В</td>
+                <td>Г = (А+Б+В)</td>
+            </tr>
+            <tr>
+                <td>[R_A]</td>
+                <td>[R_B]</td>
+                <td>[R_C]</td>
+                <td>[R_SUM]</td>
+            </tr>
+            <tr>
+                <td colspan="3">Размер финансирования к выплате:</td>
+                <td>[R_SUM]</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>[FUND_SIGN]</p>
+	[CANCELLED]
+</body>
+</html>

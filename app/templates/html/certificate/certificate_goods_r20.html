@@ -1,0 +1,121 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Сертификат на товары</title>
+  <style>
+    body {
+      font-size: 13px;
+      font-family: Arial;
+      margin: 0;
+      padding: 0;
+    }
+    .page {
+        height: 295.5mm;
+        width: 209mm;
+        background: #ffffff url('../app/templates/certificate.jpg') top center repeat-y;
+        background-size: 209mm 295.5mm;
+        margin: 0;
+    }
+    div.padding {
+        padding: 90px 70px 0 70px;
+    }
+    h1 {
+      font-size: 13px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    p {
+      line-height: 1.2em;
+      margin-bottom: 8px;
+      font-size: 12px;
+    }
+    p.center {
+        text-align: center;
+    }
+    p.small {
+        font-size: 9px;
+        text-align: justify;
+    }
+    table td, table th {
+      border: none;
+      font-size: 12px;
+    }
+    table th {
+      font-weight: bold;
+      text-align: left;
+    }
+    table {
+      width: 100%;
+      border: none;
+      margin: 20px 0 20px 0;
+    }
+    .left {
+        float: left;
+        width: 40%;
+        text-align: left;
+    }
+    .right {
+        float: right;
+        width: 40%;
+        text-align: right;
+    }
+  </style>
+</head>
+<body>
+    <div class="page">
+        <div class="padding">
+            <h1>[Z_TITLE]</h1>
+            <p class="center">[Z_SUBTITLE]</p>
+            <div class="left"><p>[Z_NUM]</p></div>
+            <div class="right"><p>[Z_DATE]</p></div>
+            <div style="clear: both;"></div>
+            <p><strong>[Z_PRE]</strong></p>
+            <p><strong>Автокомпоненты</strong></p>
+            <table>
+                <tr>
+                    <td><strong>№</strong></td>
+                    <td><strong>Код ТН ВЭД / КП ВЭД</strong></td>
+                    <td><strong>Вес, кг</strong></td>
+                    <td><strong>Дата импорта</strong></td>
+                    <td><strong>Цена, за кг</strong></td>
+                    <td><strong>Размер платежа, за товар</strong></td>
+                </tr>
+                [Z_TABLE]
+            </table>
+            <p><strong>Упаковка</strong></p>
+            <table>
+                <tr>
+                    <th width="5%">№</th>
+                    <th width="10%">Код ТН ВЭД</th>
+                    <th width="60%">Наименование</th>
+                    <th width="5%">Вес упаковки, кг</th>
+                    <th width="5%">Размер платежа, тенге</th>
+                    <th width="10%">Отчетный месяц</th>
+                </tr>
+                [Z_TABLE1]
+            </table>
+            <p><strong>Товары в упаковке</strong></p>
+            <table>
+                <tr>
+                    <th width="5%">№</th>
+                    <th width="10%">Код ТН ВЭД товара</th>
+                    <th width="30%">Наименование товара</th>
+                    <th width="30%">Тип упаковки</th>
+                    <th width="5%">Вес упаковки, кг</th>
+                    <th width="5%">Размер платежа, тенге</th>
+                    <th width="10%">Отчетный месяц</th>
+                </tr>
+                [Z_TABLE2]
+            </table>
+            <p>[Z_SUM]</p>
+            <p>[Z_DOC]</p>
+            <p>[Z_ROP]</p>
+            <p class="center" style="margin-top: 20px; margin-bottom: 20px;">[Z_QR]</p>
+            <p class="small">[Z_S1]</p>
+            <p class="small">[Z_S2] [LOG_INFO]</p>
+	    [CANCELLED]
+        </div>
+    </div>
+    [LOGS]
+</body>
+</html>

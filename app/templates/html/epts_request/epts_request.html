@@ -1,0 +1,97 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Справка запроса в ЭПТС</title>
+    <style>
+        body {
+            font-size: 14px;
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+        }
+
+        .page {
+            margin: 0;
+        }
+
+        div.padding {
+            padding: 30px 30px 0 30px;
+        }
+
+        h1 {
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 22px;
+        }
+
+        p {
+            line-height: 1.3em;
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+
+        p.center {
+            text-align: center;
+        }
+
+        div.response {
+            font-size: 12px;
+            text-align: left;
+            text-transform: uppercase;
+        }
+
+        p.small {
+            font-size: 9px;
+            text-align: justify;
+        }
+
+        table td, table th {
+            border-left: 1px solid #000000;
+            border-top: 1px solid #000000;
+            padding: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-right: 1px solid #000000;
+            border-bottom: 1px solid #000000;
+            font-size: 13px;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        .left {
+            float: left;
+            width: 40%;
+            text-align: left;
+        }
+
+        .right {
+            float: right;
+            width: 40%;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <div class="padding">
+        <h1>[HEADER]</h1>
+        <p class="center">[DESCRIPTION]</p>
+        <div class="left"><p>[AUTHOR]</p></div>
+        <div class="right"><p>[DATE]</p></div>
+        <div style="clear: both;"></div>
+        <p><strong>[STATUS]</strong></p>
+        <table cellspacing="0">
+            [TABLE]
+            <tr>
+                <td colspan="2"><p class="center">[Z_QR_X509] &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [Z_QR]</p></td>
+            </tr>
+            <tr>
+                <td colspan="2">[ORG_NAME]</td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приложение 3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            /*font-family: 'Open Sans', sans-serif;*/
+            font-family: "DejaVu Sans", sans-serif;
+            font-size: 14px;
+        }
+        table {
+            width: 100%;
+            border-right: 1px solid #dddddd;
+            border-bottom: 1px solid #dddddd;
+        }
+        td {
+            padding: 10px;
+            border-top: 1px solid #dddddd;
+            border-left: 1px solid #dddddd;
+        }
+        td:first-child {
+            text-align: center;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .ss {
+            font-size: 12px;
+        }
+        .page-break {
+            page-break-after: always;
+        }
+        h4 {
+            text-transform: uppercase;
+            text-align: center;
+        }
+        u {
+            text-decoration: none;
+            border-bottom: 1px solid #222;
+        }
+    </style>
+</head>
+<body>
+    <div style="float: right;">
+        <p class="ss">
+            Приложение 3 к Правилам<br>
+            стимулирования производства в<br>
+            Республике Казахстан<br>
+            экологически чистых<br>
+            автомобильных транспортных<br>
+            средств (соответствующих<br>
+            экологическому классу,<br>
+            установленному техническим<br>
+            регламентом Евразийского<br>
+            экономического союза; с<br>
+            электродвигателями) и их<br>
+            компонентов, а также самоходной<br>
+            сельскохозяйственной техники,<br>
+            соответствующей экологическим требованиям,<br>
+            определенным техническими регламентами<br><br/>
+            Форма
+        </p>
+    </div>
+    <div style="clear: both;"></div>
+    <h4>Расчет финансирования части затрат на содержание рабочих мест</h4>
+    <p>
+        Наименование организации <u>[FUND_FROM]</u><br/>
+        Место нахождения <u>[FUND_ADDRESS]</u><br/>
+        БИН (ИИН) <u>[FUND_IDNUM]</u> ОКЭД <u>[FUND_OKED]</u> Кбе <u>[FUND_KBE]</u> БИК <u>[FUND_BIK]</u><br/>
+        Свидетельство о регистрации <u>[FUND_REG_NUM]</u>
+    </p>
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                <td>
+                    Фонд оплаты<br/>
+                    труда<br/>
+                    работников<br/>
+                    производителя<br/>
+                    (тенге)
+                </td>
+                <td>
+                    Сумма отчислений<br/>
+                    на страховые<br/>
+                    взносы по<br/>
+                    обязательному<br/>
+                    социальному<br/>
+                    страхованию<br/>
+                    (тенге)
+                </td>
+                <td>
+                    Сумма<br/>
+                    отчислений<br/>
+                    на<br/>
+                    социальный<br/>
+                    налог (тенге)
+                </td>
+                <td>
+                    Сумма отчислений на<br/>
+                    обязательное страхование<br/>
+                    работников от несчастных<br/>
+                    случаев при исполнении<br/>
+                    ими трудовых (служебных)<br/>
+                    обязанностей (тенге)
+                </td>
+                <td>
+                    Сумма фактически<br/>
+                    понесенных затрат,<br/>
+                    подлежащих<br/>
+                    возмещению и<br/>
+                    выплате (тенге)
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>А</td>
+                <td>Б</td>
+                <td>В</td>
+                <td>Г</td>
+                <td>Д = (А+Б+В+Г)</td>
+            </tr>
+            <tr>
+                <td>[W_A]</td>
+                <td>[W_B]</td>
+                <td>[W_C]</td>
+                <td>[W_D]</td>
+                <td>[W_SUM]</td>
+            </tr>
+            <tr>
+                <td colspan="4">Размер финансирования к выплате:</td>
+                <td>[W_SUM]</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>[FUND_SIGN]</p>
+	[CANCELLED]
+</body>
+</html>

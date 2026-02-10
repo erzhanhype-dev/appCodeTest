@@ -1,0 +1,93 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Сертификат на ТС</title>
+  <style>
+    body {
+      font-size: 14px;
+      font-family: Arial;
+      margin: 0;
+      padding: 0;
+    }
+    .page {
+        width: 100%;
+        margin: 0;
+    }
+    div.padding {
+        padding: 90px 70px 0 70px;
+    }
+    h1 {
+      font-size: 14px;
+      text-align: center;
+      margin-top: 22px;
+      margin-bottom: 12px;
+    }
+    p {
+      line-height: 1.3em;
+      margin-bottom: 8px;
+      font-size: 13px;
+    }
+    p.center {
+        text-align: center;
+    }
+    p.small {
+        font-size: 9px;
+        text-align: justify;
+    }
+    p.justify {
+        text-align: justify;
+        text-transform: uppercase;
+    }
+    table td, table th {
+      border-left: 1px solid #000000;
+      border-top: 1px solid #000000;
+      padding: 5px;
+    }
+    table {
+      width: 100%;
+      border-right: 1px solid #000000;
+      border-bottom: 1px solid #000000;
+      table-layout: fixed;
+    }
+    .left {
+        float: left;
+        width: 40%;
+        text-align: left;
+    }
+    .right {
+        float: right;
+        width: 40%;
+        text-align: right;
+    }
+  </style>
+</head>
+<body>
+    <div class="page">
+      <div class="left"> [TOP_LEFT] <br><br></div>
+      <div class="right">[Z_QR]</div>
+      <div style="clear:both;"></div>
+      <h1>[Z_TITLE]</h1>
+      <div style="clear: both;"></div>
+      <div class="left"><p>[Z_NUM]</p></div>
+      <div class="right"><p>[Z_DATE]</p></div>
+      <div style="clear: both;"></div>
+      <p><strong>[Z_PRE]</strong></p>
+      <p>[Z_CAT]</p>
+      <p>[Z_YEAR]</p>
+      <p>[DT_MANUFACTURE]</p>
+      <p>[Z_VIN]</p>
+      <p>[Z_VOLUME]</p>
+      <p>[Z_TYPE]</p>
+      <p>[Z_SUM]</p>
+      <p>[Z_DOC]</p>
+      <p class="center">[QR_LINE]</p>
+      <p class="justify">[Z_ROP]</p>
+      <p class="small">[Z_S1]</p>
+      <p class="small">[Z_S2]</p>
+      <p class="small">* Штрих-код содержит данные, полученные из информационной системы АО «Жасыл Даму» и подписанные электронно-цифровой подписью Заместителя Председателя Правления, члена Правления АО «Жасыл Даму» Даутова Дархана Алтаевича
+         [LOG_INFO]</p>
+      [CANCELLED]
+    </div>
+    [LOGS]
+</body>
+</html>

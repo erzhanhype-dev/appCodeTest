@@ -1,0 +1,115 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Кәдеге жарату төлемін енгізу туралы сертификат</title>
+  <style>
+    body {
+      font-size: 14px;
+      font-family: Arial;
+      margin: 0;
+      padding: 0;
+    }
+    .page {
+        width: 100%;
+        margin: 0;
+    }
+    div.padding {
+        padding: 90px 70px 0 70px;
+    }
+    h1 {
+      font-size: 14px;
+      text-align: center;
+      margin-top: 22px;
+      margin-bottom: 12px;
+    }
+    p {
+      line-height: 1.3em;
+      margin-bottom: 8px;
+      font-size: 13px;
+    }
+    p.center {
+        text-align: center;
+    }
+    p.small {
+        font-size: 10px;
+        text-align: justify;
+    }
+    table td, table th {
+      border-left: 1px solid #000000;
+      border-top: 1px solid #000000;
+      font-size: 13px;
+      font-family: Arial;
+      padding: 5px;
+      text-align: center;
+    }
+    table {
+      width: 100%;
+      border-right: 1px solid #000000;
+      border-bottom: 1px solid #000000;
+        table-layout: fixed;
+    }
+    p.justify {
+        text-align: justify;
+        text-transform: uppercase;
+    }
+    .left {
+        float: left;
+        width: 40%;
+        text-align: left;
+    }
+    .right {
+        float: right;
+        width: 40%;
+        text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="left">[Z_NUM] - өнім (тауарлар), қаптама, КӨӨ <br><br></div>
+    <div class="right">[Z_QR]</div>
+    <div style="clear:both;"></div>
+    <h1>[Z_TITLE]</h1>
+    <div style="clear: both;"></div>
+    <div class="left"><p>[Z_NUM]</p></div>
+    <div class="right"><p>[Z_DATE]</p></div>
+    <div style="clear: both;"></div>
+    <p><strong>[Z_PRE]</strong></p>
+    <p><strong>Өнім (тауар)саны: [Z_COUNT]</strong></p>
+    <table cellspacing="0">
+      <tr>
+          <th>№</th>
+          <th>Өнімнің (Тауардың) СЭҚ ТН коды</th>
+          <th >Өнімді (тауарды) импорттау/өндіру күні</th>
+          <th>Шот-фактура нөмірі/МКД</th>
+          <th>ШФ/МКД күні</th>
+          <th>Өнімнің (тауардың) салмағы, кг</th>
+          <th>Өнімнің (тауардың) кәдеге жарату төлемінің сомасы, тг.</th>
+          <th>Қаптаманың СЭҚ ТН коды</th>
+          <th>Қаптаманың салмағы, кг.</th>
+          <th>Қаптама үшін кәдеге жарату төлемі, тг</th>
+      </tr>
+      [Z_TABLE]
+    </table>
+    <p>[Z_SUM]</p>
+    <p>[Z_DOC]</p>
+    <p class="center">[QR_LINE]</p>
+    <p class="justify">[Z_ROP]</p>
+    <p class="small">Осы құжат электрондық тәсілмен қалыптастырылды және ҚР Ұлттық куәландырушы
+        орталығы "Жасыл даму" АҚ уәкілетті қызметкеріне берген электрондық-цифрлық қолтаңбамен қол қойылды. Осы құжатта
+        көрсетілген деректер төлем сомасын қоса алғанда, төлеуші (өндіруші, импорттаушы) ұсынған мәліметтер негізінде
+        қалыптастырылды. Осы құжатта көрсетілген мәліметтердің толықтығы мен дұрыстығы үшін, сондай-ақ төлеушіге
+        (өндірушіге, импорттаушыға) және/немесе үшінші тұлғаларға, мемлекетке, мемлекеттік органдар мен ұйымдарға
+        берілген мәліметтердің дұрыстығына және/немесе толықтығына байланысты келтірілген қандай да бір ықтимал
+        зардаптар және/немесе залал үшін жауапкершілікті толығымен төлеуші (өндіруші, импорттаушы) алады.
+        "Жасыл даму" АҚ мұндай жауапкершіліктен толығымен босатылады.  Кәдеге жарату төлемін енгізу туралы осы
+        сертификаттың деректері мен түпнұсқалығын "Жасыл даму"АҚ ресми сайтында тексеруге болады.</p>
+    <p class="small">Кәдеге жарату төлемін енгізу туралы сертификаттың нысаны Қазақстан Республикасы
+        Үкіметінің 2021 жылғы "25" қазандағы №763 қаулысымен бекітілген өндірушілердің, импорттаушылардың кеңейтілген
+        міндеттемелерін іске асыру қағидалары негізінде әзірленді және бекітілді.</p>
+    <p class="small">* Штрих-код "Жасыл даму" АҚ ақпараттық жүйесінен алынған және электрондық-цифрлық қолтаңбамен қол қойылған деректерді қамтиды Даутова Д.А. «Жасыл даму» АҚ [LOG_INFO]</p>
+    [CANCELLED]
+  </div>
+  [LOGS]
+</body>
+</html>

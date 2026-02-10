@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приложение 11</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            /*font-family: 'Open Sans', sans-serif;*/
+            font-family: "DejaVu Sans", sans-serif;
+            font-size: 12px;
+        }
+        table {
+            width: 100%;
+            border-right: 1px solid #dddddd;
+            border-bottom: 1px solid #dddddd;
+        }
+        td {
+            text-align: center;
+            padding: 10px;
+            border-top: 1px solid #dddddd;
+            border-left: 1px solid #dddddd;
+        }
+        td:first-child {
+            text-align: center;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .ss {
+            font-size: 12px;
+        }
+        .page-break {
+            page-break-after: always;
+        }
+        h4 {
+            text-transform: uppercase;
+            text-align: center;
+        }
+        u {
+            text-decoration: none;
+            border-bottom: 1px solid #222;
+        }
+    </style>
+</head>
+<body>
+    <div style="float: right;">
+        <p class="ss">
+        Приложение 11<br/>
+            к Правилам стимулирования<br/>
+            производства в Республике<br/>
+            Казахстан экологически чистых<br/>
+            автомобильных транспортных<br/>
+            средств (соответствующих<br/>
+            экологическому классу 4 и<br/>
+            выше;<br/>
+            с электродвигателями) и их<br/>
+            компонентов, а также<br/>
+            самоходной<br/>
+            сельскохозяйственной техники,<br/>
+            соответствующей<br/>
+            экологическим<br/>
+            требованиям, определенным<br/>
+            техническими регламентами<br/><br/>
+            Форма
+        </p>
+    </div>
+    <div style="clear: both;"></div>
+    <h4 class="text-center">
+        Расчет финансирования, связанного с поддержкой гарантийных обязательств в отношении компонентов к экологически чистым автомобильным транспортным средствам
+    </h4>
+    <p>
+        Наименование организации <u>[FUND_FROM]</u><br/>
+        Место нахождения <u>[FUND_ADDRESS]</u><br/>
+        БИН (ИИН) <u>[FUND_IDNUM]</u> ОКЭД <u>[FUND_OKED]</u> Кбе <u>[FUND_KBE]</u> БИК <u>[FUND_BIK]</u><br/>
+        Свидетельство о регистрации <u>[FUND_REG_NUM]</u>
+    </p>
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                <td>
+                    Наименование компонента к экологически чистому автомобильному транспортному средству
+                </td>
+                <td>
+                    Количество выпущенных компонентов к экологически чистому автомобильному транспортному средству (штук/кг)
+                </td>
+                <td>
+                    Максимальный размер ставки финансирования, связанного с поддержкой гарантийных обязательств
+                </td>
+                <td>
+                    Сумма, подлежащая выплате (тенге)
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>А</td>
+                <td>Б</td>
+                <td>В</td>
+                <td>Г=Б*В*МРП</td>
+            </tr>
+            <tr>
+                <td>Редуктор ведущего моста для автомобильных транспортных средств категории N3, штук</td>
+                <td>0</td>
+                <td>36,00</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Изделие из чугунного литья для использования в производстве двигателей для автомобильных транспортных средств категории N, M1, M2, кг</td>
+                <td>0</td>
+                <td>0,06</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Шины (покрышки), кг</td>
+                <td>[FUND_TOTAL_WEIGHT]</td>
+                <td>0,01415</td>
+                <td>[FUND_TOTAL_AMOUNT]</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>[FUND_SIGN]</p>
+	[CANCELLED]
+</body>
+</html>

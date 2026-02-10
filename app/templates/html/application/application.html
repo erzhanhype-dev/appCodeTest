@@ -1,0 +1,71 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Форма заявки агента</title>
+  <style>
+    body {
+      font-size: 12px;
+      font-family: Arial;
+    }
+    h1 {
+      font-size: 14px;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    h2 {
+      font-size: 12px;
+      margin-bottom: 20px;
+      text-decoration: underline;
+    }
+    p {
+      line-height: 1.4em;
+      margin-bottom: 10px;
+    }
+    table td, table th {
+      border-left: 1px solid #000000;
+      border-top: 1px solid #000000;
+      padding: 5px;
+      font-size: 11px;
+    }
+    table {
+      width: 100%;
+      border-right: 1px solid #000000;
+      border-bottom: 1px solid #000000;
+    }
+    .code {
+      word-wrap: break-word;
+    }
+  </style>
+</head>
+<body>
+<h1>Заявка №[Z_NUM] от [Z_DATE], г. [Z_CITY]</h1>
+<h2>Данные производителя (импортера)</h2>
+<p>[ZA_NAME]</p>
+<p>[ZA_IIN]</p>
+<p>[ZA_CITY]</p>
+<p>[ZA_ADDRESS]</p>
+<p>[ZA_PHONE]</p>
+<p>[ZA_SUM]</p>
+<h2>Производимые (импортируемые) транспортные средства:</h2>
+<table cellspacing="0">
+  <!--<thead>-->
+    <tr>
+      <td><strong>№</strong></td>
+      <td><strong>Объем / вес / мощность</strong></td>
+      <td><strong>VIN-код или номер</strong></td>
+      <td><strong>Год производства</strong></td>
+      <td><strong>Страна производства</strong></td>
+      <td><strong>Страна импорта</strong></td>
+      <td><strong>Дата производства (импорта)</strong></td>
+      <td><strong>Категория ТС</strong></td>
+      <td><strong>Размер платежа, тенге</strong></td>
+    </tr>
+    [Z_CONTENT]
+</table>
+<p style="text-align: justify;">Подписывая настоящую заявку, Заявитель подтверждает свои полномочия по её подписанию, а также достоверность и полноту предоставленных сведений для осуществления расчета утилизационного платежа, и подтверждает, что он ознакомился с Типовым договором «Об организации сбора, транспортировки, переработки, обезвреживания, использования и (или) утилизации отходов, образующихся после утраты потребительских свойств продукции (товаров), на которую (которые) распространяются расширенные обязательства производителей (импортеров), и ее (их) упаковки», размещенным на сайте www.recycle.kz, понял его содержание и полностью с ним согласен, а также подтверждает его заключение на условиях, изложенных в нем.</p>
+<p style="text-align: justify;">Заявитель полностью проверил содержание заявки и тем самым удостоверяет, что она заполнена верно на основании предоставленных им данных и документов и соответствует им полностью.</p>
+<p>[Z_FIO]</p>
+<p>[Z_LINE]</p>
+[Z_SIGN]
+</body>
+</html>

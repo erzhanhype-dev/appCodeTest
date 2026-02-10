@@ -1,0 +1,223 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Счет на оплату</title>
+    <style>
+        body {
+            font-size: 14px;
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            font-size: 14px;
+            font-family: Arial;
+        }
+
+        .page {
+            height: 260.5mm;
+            width: 190mm;
+            background-size: 190mm 260.5mm;
+            margin: 0;
+        }
+
+        div.padding {
+            padding: 90px 10px 0 10px;
+        }
+
+        h1 {
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 22px;
+        }
+
+        p {
+            line-height: 1.3em;
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+
+        p.center {
+            text-align: center;
+        }
+
+        div.response {
+            font-size: 12px;
+            text-align: left;
+            text-transform: uppercase;
+        }
+
+        p.small {
+            font-size: 9px;
+            text-align: justify;
+        }
+
+        table td, table th {
+            border-left: 1px solid #000000;
+            border-top: 1px solid #000000;
+            padding: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-right: 1px solid #000000;
+            border-bottom: 1px solid #000000;
+        }
+
+        .left {
+            float: left;
+            width: 40%;
+            text-align: left;
+        }
+
+        .right {
+            float: right;
+            width: 40%;
+            text-align: right;
+        }
+
+        table.no-border, table.no-border td {
+            border: none;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+<div class="padding">
+        <b style="font-size: 14px">Образец платежного поручения</b>
+        <table>
+            <tr>
+                <td>
+                    <b>
+                        Бенефициар:
+                        <br>
+                        [PO_TO]
+                    </b>
+                    <br>
+                    <br>
+                    БИН: [PO_TO_IN]
+                </td>
+                <td style="text-align: center">
+                    <b>
+                        ИИК
+                        <br>
+                        <br>
+                        [PO_TO_IBAN]
+                    </b>
+                </td>
+                <td style="text-align: center">
+                    <b>
+                        Кбе
+                        <br>
+                        <br>
+                        [PO_TO_KBE]
+                    </b>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Банк бенефициара:
+                    <br>
+                    [PO_TO_BANK]
+                </td>
+                <td style="text-align: center">
+                    <b>
+                        БИК
+                        <br>
+                        [PO_TO_BIK]
+                    </b>
+                </td>
+                <td style="text-align: center">
+                    <b>
+                        Код назначения платежа
+                        <br>
+                        [PO_KNP]
+                    </b>
+                </td>
+            </tr>
+        </table>
+
+        <div style="font-size: 20px; margin: 30px 0 15px 0;"><b>Счет на оплату № R-[PO_NUM] от [PO_DATE] г.</b></div>
+        <hr style="border: 2px solid #000">
+
+        <table class="no-border">
+            <tr>
+                <td>Поставщик:</td>
+                <td>
+                    <b>
+                       БИН / ИИН [PO_TO_IN], [PO_TO], [ROP_ADDRESS] [VAT_CERT]
+                    </b>
+                </td>
+            </tr>
+            <tr>
+                <td>Покупатель:</td>
+                <td>
+                    <b>
+                        БИН / ИИН [PO_FROM_IN], [PO_FROM], [PO_FROM_ADDRESS]
+                    </b>
+                </td>
+            </tr>
+            <tr>
+                <td>Договор:</td>
+                <td>
+                    <b>
+                        [PO_CONTRACT_NUM]
+                    </b>
+                </td>
+            </tr>
+        </table>
+
+        <table style="border: 3px solid #000;border-collapse: collapse;">
+            <tr style=" text-align: center">
+                <td>№</td>
+                <td>Код</td>
+                <td>Наименование</td>
+                <td>Кол-во</td>
+                <td>Ед.</td>
+                <td>Цена</td>
+                <td>Сумма</td>
+            </tr>
+
+            <tr style="vertical-align: text-bottom; text-align: right">
+                <td>1</td>
+                <td></td>
+                <td style="max-width: 200px;  text-align: left">
+                    [PO_TARGET]
+                </td>
+                <td>1,000</td>
+                <td>шт.</td>
+                <td>[PO_AMOUNT]</td>
+                <td>[PO_AMOUNT]</td>
+            </tr>
+        </table>
+
+        <div>
+        <div style="width: 200px; float: right;clear: both; margin: 10px 0;text-align: right;">
+            <span><b>Итого: [PO_AMOUNT]</b></span>
+        </div>
+        </div>
+
+        <div style="clear:both; margin-top: 60px">
+            <div>Всего наименований 1, на сумму [PO_AMOUNT] KZT</div>
+            <div><b>Всего к оплате: [PO_SUM_TEXT]</b></div>
+            <hr style="border: 2px solid #000">
+        </div>
+
+        <div style="display: flex;margin-top: 20px">
+            <b>Исполнитель</b> &nbsp; &nbsp; &nbsp; ____________________________________________Башеева А.А.
+        </div>
+
+        <div style="background-image: url('../../app/templates/image21.png');
+    width: 255px;
+    height: 180px;
+    margin-top: -95px;
+    margin-left: 110px;">
+        </div>
+        <div>[VAT_HELPER]</div>
+        <div>[VAT_SUM]</div>
+    </div>
+</div>
+</body>
+</html>

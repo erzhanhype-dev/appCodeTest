@@ -1,0 +1,39 @@
+{
+  "require": {
+    "php": "^8.3",
+    "ext-curl": "*",
+    "ext-dom": "*",
+    "ext-fileinfo": "*",
+    "ext-json": "*",
+    "ext-libxml": "*",
+    "ext-mysqli": "*",
+    "ext-openssl": "*",
+    "ext-pdo": "*",
+    "ext-psr": "*",
+    "ext-simplexml": "*",
+    "ext-soap": "*",
+    "ext-xmlreader": "*",
+    "ext-zlib": "*",
+    "aferrandini/phpqrcode": "^1.0",
+    "knplabs/knp-snappy": "^1.4",
+    "pclzip/pclzip": "^2.8",
+    "php-amqplib/php-amqplib": "^3.5",
+    "phpmailer/phpmailer": "^7.0",
+    "phpoffice/phpspreadsheet": "^5.1",
+    "ext-zip": "*",
+    "ext-mbstring": "*"
+  },
+  "require-dev": {
+    "phalcon/devtools": "^5.0@dev",
+    "phpunit/phpunit": "^10.5"
+  },
+  "config": {
+    "platform-check": true,
+    "sort-packages": true
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "@php -r \"echo 'Phalcon project initialized for PHP 8.x\n';\""
+    ]
+  }
+}

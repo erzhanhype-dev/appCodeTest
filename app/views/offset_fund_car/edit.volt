@@ -1,0 +1,31 @@
+<div class="row justify-content-center">
+    <div class="col-md-12">
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h5 class="mb-0">Редактирования ТС</h5>
+                <small class="text-muted">Финансирование методом взаимозачета</small>
+            </div>
+            <a href="{{ url("offset_fund/view/" ~ offset_fund.id) }}" class="btn btn-outline-secondary">
+                <i class="fa fa-arrow-left"></i> Назад
+            </a>
+        </div>
+
+        <div id="ajax-update-container">
+            {{ flash.output() }}
+            <div class="card">
+                <div class="card-body pl-0 pr-0">
+                    <div class="col-md-8 col-lg-4 col-sm-12">
+                        <form action="/offset_fund_car/update/{{ id }}" method="post">
+                            {{ partial('offset_fund_car/form') }}
+                            <input type="hidden" name="csrfToken" value="{{ csrfToken }}">
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">Сохранить</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

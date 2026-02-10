@@ -1,0 +1,89 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Форма заявки агента</title>
+  <style>
+    body {
+      font-size: 14px;
+      font-family: Arial;
+    }
+    h1 {
+      font-size: 16px;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    h2 {
+      font-size: 14px;
+      margin-bottom: 20px;
+      text-decoration: underline;
+    }
+    p {
+      line-height: 1.5em;
+      margin-bottom: 10px;
+    }
+    table td, table th {
+      border-left: 1px solid #000000;
+      border-top: 1px solid #000000;
+      padding: 5px;
+      font-size: 12px;
+    }
+    table {
+      width: 100%;
+      border-right: 1px solid #000000;
+      border-bottom: 1px solid #000000;
+    }
+  </style>
+</head>
+<body>
+<h1>Заявка №[Z_NUM] от [Z_DATE], г. [Z_CITY]</h1>
+<h2>Данные импортера</h2>
+<p>[ZA_NAME]</p>
+<p>[ZA_IIN]</p>
+<p>[ZA_CITY]</p>
+<p>[ZA_ADDRESS]</p>
+<p>[ZA_PHONE]</p>
+<p>[ZA_SUM]</p>
+<h2>Автокомпоненты:</h2>
+<table cellspacing="0">
+    <tr>
+      <td><strong>№</strong></td>
+      <td><strong>Код ТН ВЭД / КП ВЭД</strong></td>
+      <td><strong>Вес, кг</strong></td>
+      <td><strong>Дата импорта</strong></td>
+      <td><strong>Цена, за кг</strong></td>
+      <td><strong>Размер платежа, за товар</strong></td>
+    </tr>
+    [Z_CONTENT]
+</table>
+<h2>Упаковка:</h2>
+<table cellspacing="0">
+    <tr>
+      <th width="5%">№</th>
+      <th width="10%">Код ТН ВЭД товара</th>
+      <th width="30%">Наименование товара</th>
+      <th width="30%">Тип упаковки</th>
+      <th width="5%">Вес упаковки, кг</th>
+      <th width="5%">Размер платежа, тенге</th>
+      <th width="10%">Отчетный месяц</th>
+    </tr>
+    [Z_CONTENT2]
+</table>
+<h2>Товары в упаковке:</h2>
+<table cellspacing="0">
+    <tr>
+      <th width="5%">№</th>
+      <th width="10%">Код ТН ВЭД</th>
+      <th width="60%">Наименование</th>
+      <th width="5%">Вес упаковки, кг</th>
+      <th width="5%">Размер платежа, тенге</th>
+      <th width="10%">Отчетный месяц</th>
+    </tr>
+    [Z_CONTENT1]
+</table>
+<!--<p><strong>Данные агента:</strong> [Z_AGENT]</p>-->
+<p style="text-align: justify;">Подписывая настоящую заявку, Заявитель подтверждает, свои полномочия по её подписанию, а также достоверность и полноту предоставленных сведений для осуществления расчета Платежа и подтверждает, что он ознакомился с Типовым договором «Об организации сбора, транспортировки, переработки, обезвреживания, использования и (или) утилизации отходов, образующихся после утраты потребительских свойств продукции (товаров), на которую (которые) распространяются расширенные обязательства производителей (импортеров), и ее (их) упаковки» размещенного на сайте www.recycle.kz, понял его содержание и полностью с ним согласен, а также подтверждает его заключение на условиях, изложенных в нем.</p>
+<p style="text-align: justify;">Заявитель полностью проверил содержание заявки и тем самым удостоверяет, что она заполнена верно на основании предоставленных им данных и документов и соответствует им полностью.</p>
+<p><strong>[Z_FIO]</strong></p>
+<p>[Z_LINE]</p>
+</body>
+</html>

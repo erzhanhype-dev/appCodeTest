@@ -1,0 +1,98 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Справка запроса в МСХ(ГРСТ)</title>
+    <style>
+        body {
+            font-size: 12px;
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+        }
+
+        .page {
+            height: 295.5mm;
+            width: 100%;
+            /* background: #ffffff url('../app/templates/certificate.jpg') top center repeat-y; */
+            background-size: 209mm 295.5mm;
+            margin: 0;
+        }
+
+        div.padding {
+            padding: 30px 20px 0 20px;
+        }
+
+        h1 {
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 22px;
+        }
+
+        p {
+            line-height: 1em;
+            margin-bottom: 2px;
+            font-size: 11px;
+        }
+
+        p.center {
+            text-align: center;
+        }
+
+        div.response {
+            font-size: 11px;
+            text-align: left;
+            text-transform: uppercase;
+        }
+
+        p.small {
+            font-size: 9px;
+            text-align: justify;
+        }
+
+        table td, table th {
+            font-size: 11px;
+            border-left: 1px solid #000000;
+            border-top: 1px solid #000000;
+            padding: 2px;
+            font-size: 11px;
+        }
+
+        table {
+            width: 100%;
+            border-right: 1px solid #000000;
+            border-bottom: 1px solid #000000;
+            table-layout: fixed;
+        }
+
+        .left {
+            float: left;
+            width: 40%;
+            text-align: left;
+        }
+
+        .right {
+            float: right;
+            width: 40%;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <div class="padding">
+        <h1>[HEADER]</h1>
+        <p class="center">[DESCRIPTION]</p>
+        <div class="left"><p>[AUTHOR]</p></div>
+        <div class="right"><p>[DATE]</p></div>
+        <table cellspacing="0">
+            [TABLE]
+            <tr>
+                <td colspan="2"><p class="center">[Z_QR_X509] &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [Z_QR]</p></td>
+            </tr>
+            <tr>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

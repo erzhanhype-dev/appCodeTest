@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приложение 10</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            /*font-family: 'Open Sans', sans-serif;*/
+            font-family: "DejaVu Sans", sans-serif;
+            font-size: 12px;
+        }
+        table {
+            width: 100%;
+            border-right: 1px solid #dddddd;
+            border-bottom: 1px solid #dddddd;
+        }
+        td {
+            text-align: center;
+            padding: 10px;
+            border-top: 1px solid #dddddd;
+            border-left: 1px solid #dddddd;
+        }
+        td:first-child {
+            text-align: center;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .ss {
+            font-size: 12px;
+        }
+        .page-break {
+            page-break-after: always;
+        }
+        h4 {
+            text-transform: uppercase;
+            text-align: center;
+        }
+        u {
+            text-decoration: none;
+            border-bottom: 1px solid #222;
+        }
+    </style>
+</head>
+<body>
+    <div style="float: right;">
+        <p class="text-center">
+            Приложение 10<br/>
+            к Правилам стимулирования<br/>
+            производства в Республике<br/>
+            Казахстан экологически чистых<br/>
+            автомобильных транспортных<br/>
+            средств (соответствующих<br/>
+            экологическому классу,<br/>
+            установленному техническим<br/>
+            регламентом Евразийского<br/>
+            экономического союза;<br/>
+            с электродвигателями) и их<br/>
+            компонентов, а также самоходной<br/>
+            сельскохозяйственной техники,<br/>
+            соответствующей экологическим<br/>
+            требованиям, определенным<br/>
+            техническими регламентами<br/><br/>
+            Форма
+        </p>
+    </div>
+    <div style="clear: both;"></div>
+    <h4 class="text-center">
+        Расчет финансирования, связанного с поддержкой гарантийных<br/>
+        обязательств в отношении самоходной сельскохозяйственной техники
+    </h4>
+    <p>
+        Наименование организации <u>[FUND_FROM]</u><br/>
+        Место нахождения <u>[FUND_ADDRESS]</u><br/>
+        БИН (ИИН) <u>[FUND_IDNUM]</u> ОКЭД <u>[FUND_OKED]</u> Кбе <u>[FUND_KBE]</u> БИК <u>[FUND_BIK]</u><br/>
+        Свидетельство о регистрации <u>[FUND_REG_NUM]</u>
+    </p>
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                <td>
+                    Вид самоходной<br/>
+                    сельскохозяйственной<br/>
+                    техники
+                </td>
+                <td>
+                    Мощность двигателя
+                </td>
+                <td>
+                    Количество<br/>
+                    выпущенных<br/>
+                    самоходной<br/>
+                    сельскохозяйственной<br/>
+                    техники (штук)
+                </td>
+                <td>
+                    Размер ставки<br/>
+                    финансирования, связанного<br/>
+                    с поддержкой гарантийных<br/>
+                    обязательств в отношении<br/>
+                    самоходной сельскохозяйственной <br/>
+                    техники (МРП)*
+                </td>
+                <td>
+                    Сумма,<br/>
+                    подлежащая<br/>
+                    выплате<br/>
+                    (тенге)
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>А</td>
+                <td>Б</td>
+                <td>В</td>
+                <td>Г</td>
+                <td>Д=В*Г*МРП</td>
+            </tr>
+            <tr>
+                <td rowspan="6">Тракторы</td>
+                <td>До 60 л.с.</td>
+                <td>[T_1C]</td>
+                <td>100</td>
+                <td>[T_1]</td>
+            </tr>
+            <tr>
+                <td>От 61 л.с. до 130 л.с..</td>
+                <td>[T_2C]</td>
+                <td>275</td>
+                <td>[T_2]</td>
+            </tr>
+            <tr>
+                <td>От 131 л.с. до 220 л.с.</td>
+                <td>[T_3C]</td>
+                <td>850</td>
+                <td>[T_3]</td>
+            </tr>
+            <tr>
+                <td>От 221 л.с. до 340 л.с.</td>
+                <td>[T_4C]</td>
+                <td>1 450</td>
+                <td>[T_4]</td>
+            </tr>
+            <tr>
+                <td>От 341 л.с. до 380 л.с.</td>
+                <td>[T_5C]</td>
+                <td>1 450</td>
+                <td>[T_5]</td>
+            </tr>
+            <tr>
+                <td>Свыше 380 л.с.</td>
+                <td>[T_6C]</td>
+                <td>2 000</td>
+                <td>[T_6]</td>
+            </tr>
+            <tr>
+                <td rowspan="6">Комбайны зерноуборочные, комбайны кормоуборочные</td>
+                <td>До 160 л.с.</td>
+                <td>[T_7C]</td>
+                <td>450</td>
+                <td>[T_7]</td>
+            </tr>
+            <tr>
+                <td>От 161 л.с. до 220 л.с.</td>
+                <td>[T_8C]</td>
+                <td>1 150</td>
+                <td>[T_8]</td>
+            </tr>
+            <tr>
+                <td>От 221 л.с. до 255 л.с.</td>
+                <td>[T_9C]</td>
+                <td>1 600</td>
+                <td>[T_9]</td>
+            </tr>
+            <tr>
+                <td>От 256 л.с. до 325 л.с.</td>
+                <td>[T_10C]</td>
+                <td>1 900</td>
+                <td>[T_10]</td>
+            </tr>
+            <tr>
+                <td>От 326 л.с. до 400 л.с.</td>
+                <td>[T_11C]</td>
+                <td>1 900</td>
+                <td>[T_11]</td>
+            </tr>
+            <tr>
+                <td>Свыше 400 л.с.</td>
+                <td>[T_12C]</td>
+                <td>2 250</td>
+                <td>[T_12]</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Иная самоходная сельскохозяйственная техника</td>
+                <td>До 200 л.с.</td>
+                <td>[T_13C]</td>
+                <td>450</td>
+                <td>[T_13]</td>
+            </tr>
+            <tr>
+                <td>От 201 л.с.</td>
+                <td>[T_14C]</td>
+                <td>1 150</td>
+                <td>[T_14]</td>
+            </tr>
+            <tr>
+                <td colspan="4">Размер финансирования к выплате:</td>
+                <td>[T_TOTAL]</td>
+            </tr>
+        </tbody>
+    </table>
+    <div style="clear: both;"></div>
+    <p style="text-align: justify;"><em>* Примечание: Для расчета размера финансирования, связанного с
+        поддержкой гарантийных обязательств в отношении самоходной
+        сельскохозяйственной техники, выпущенных до 14 мая 2022 года, применяются
+        максимальные размеры ставок финансирования, связанные с поддержкой
+        гарантийных обязательств в отношении самоходной сельскохозяйственной
+        техники, предусмотренные до введения в действие настоящего приказа.</em>
+    </p>
+    <div style="clear: both;"></div>
+    <p>[FUND_SIGN]</p>
+	[CANCELLED]
+</body>
+</html>

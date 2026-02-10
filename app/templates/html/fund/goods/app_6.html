@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приложение 6</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            /*font-family: 'Open Sans', sans-serif;*/
+            font-family: "DejaVu Sans", sans-serif;
+            font-size: 14px;
+        }
+        table {
+            width: 100%;
+            border-right: 1px solid #dddddd;
+            border-bottom: 1px solid #dddddd;
+        }
+        td {
+            padding: 10px;
+            border-top: 1px solid #dddddd;
+            border-left: 1px solid #dddddd;
+        }
+        td:first-child {
+            text-align: center;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .ss {
+            font-size: 12px;
+        }
+        .page-break {
+            page-break-after: always;
+        }
+        h4 {
+            text-transform: uppercase;
+            text-align: center;
+        }
+        u {
+            text-decoration: none;
+            border-bottom: 1px solid #222;
+        }
+    </style>
+</head>
+<body>
+    <div style="float: right;">
+        <p class="ss">
+            Приложение 6<br/>
+            к Правилам стимулирования<br/>
+            производства в Республике<br/>
+            Казахстан экологически чистых<br/>
+            автомобильных транспортных<br/>
+            средств (соответствующих<br/>
+            экологическому классу 4 и выше;<br/>
+            с электродвигателями) и их<br/>
+            компонентов, а также самоходной<br/>
+            сельскохозяйственной техники,<br/>
+            соответствующей экологическим<br/>
+            требованиям, определенным<br/>
+            техническими регламентами<br/><br/>
+            Форма
+        </p>
+    </div>
+    <div style="clear: both;"></div>
+    <h4 class="text-center">
+        Расчет финансирования части затрат, связанных с проведением<br/>
+        испытаний автомобильных транспортных средств и их<br/>
+        компонентов, транспортировку образцов автомобильных<br/>
+        транспортных средств и их компонентов до места проведения<br/>
+        испытаний и обратно, связанных с выпуском продукции
+    </h4>
+    <p>
+        Наименование организации <u>[FUND_FROM]</u><br/>
+        Место нахождения <u>[FUND_ADDRESS]</u><br/>
+        БИН (ИИН) <u>[FUND_IDNUM]</u> ОКЭД <u>[FUND_OKED]</u> Кбе <u>[FUND_KBE]</u> БИК <u>[FUND_BIK]</u><br/>
+        Свидетельство о регистрации <u>[FUND_REG_NUM]</u>
+    </p>
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                <td>
+                    Сумма затрат,<br/>
+                    понесенных<br/>
+                    производителем на<br/>
+                    проведение<br/>
+                    испытаний (тенге)
+                </td>
+                <td>
+                    Сумма затрат, понесенных<br/>
+                    производителем на<br/>
+                    транспортировку образцов<br/>
+                    автомобильных транспортных<br/>
+                    средств до места проведения<br/>
+                    испытаний и обратно (тенге)
+                </td>
+                <td>
+                    Сумма затрат, понесенных<br/>
+                    производителем на<br/>
+                    получение одобрения типа<br/>
+                    транспортного средства<br/>
+                    (шасси) (тенге)
+                </td>
+                <td>
+                    Сумма фактически<br/>
+                    понесенных затрат,<br/>
+                    подлежащих<br/>
+                    возмещению и<br/>
+                    выплате (тенге)
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>А</td>
+                <td>Б</td>
+                <td>В</td>
+                <td>Г = (А+Б+В)</td>
+            </tr>
+            <tr>
+                <td>[TC_A]</td>
+                <td>[TC_B]</td>
+                <td>[TC_C]</td>
+                <td>[TC_SUM]</td>
+            </tr>
+            <tr>
+                <td colspan="3">Размер финансирования к выплате:</td>
+                <td>[TC_SUM]</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>[FUND_SIGN]</p>
+	[CANCELLED]
+</body>
+</html>
