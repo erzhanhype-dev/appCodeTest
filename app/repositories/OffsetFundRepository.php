@@ -3,6 +3,7 @@
 namespace App\Repositories;
 
 use OffsetFund;
+use OffsetFundCar;
 use RefFund;
 use RefFundKeys;
 use User;
@@ -36,6 +37,44 @@ class OffsetFundRepository
                 "search" => $refFundKey->name
             ]
         ]);
+    }
+
+    /**
+     * Сумма total_value по ключу фонда и пользователю.
+     */
+    public function getUsedLimitValue(int $refFundKeyId, int $userId): float
+    {
+        $result = OffsetFund::sum([
+            'column' => 'total_value',
+            'conditions' => 'ref_fund_key_id = :k: AND user_id = :u:',
+            'bind' => ['k' => $refFundKeyId, 'u' => $userId],
+        ]);
+
+        return (float) $result;
+    }
+
+
+    /**
+     * Сумма объема ТС по заявке взаимозачета.
+     */
+    public function getUsedCarVolume(int $offsetFundId, ?int $excludeCarId = null): float
+    {
+        $params = [
+            'column' => 'volume',
+            'conditions' => 'offset_fund_id = :offset_fund_id:',
+            'bind' => [
+                'offset_fund_id' => $offsetFundId,
+            ],
+        ];
+
+        if ($excludeCarId !== null) {
+            $params['conditions'] .= ' AND id != :car_id:';
+            $params['bind']['car_id'] = $excludeCarId;
+        }
+
+        $result = \OffsetFundCar::sum($params);
+
+        return (float) $result;
     }
 
     /**
