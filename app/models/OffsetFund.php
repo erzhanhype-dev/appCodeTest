@@ -82,6 +82,15 @@ class OffsetFund extends Model
             ]
         );
 
+        $this->hasMany(
+            'id',
+            OffsetFundFile::class,
+            'offset_fund_id',
+            [
+                'alias'    => 'files',
+            ]
+        );
+
         $this->setup(['notNullValidations' => false]);
     }
 

@@ -32,27 +32,31 @@ class CreateOffsetFundDto
         $this->period_end_at = $period_end_at;
     }
 
-    /**
-     * Фабричный метод для создания DTO из реквеста.
-     * Здесь изолирована вся логика парсинга "грязных" данных.
-     */
     public static function fromRequest(RequestInterface $request, int $userId): self
     {
-        $rawTotalValue = $request->getPost('total_value');
-        // Логика очистки числа перенесена сюда
+        $refFundKeyId = (int)$request->getPost('ref_fund_key_id', 'int');
+
+        $rawTotalValue = (string)$request->getPost('total_value');
         $totalValue = (float)str_replace(',', '.', $rawTotalValue);
 
-        $startStr = $request->getPost('period_start_at');
-        $endStr = $request->getPost('period_end_at');
+        $type = trim((string)$request->getPost('type', 'string'));
+        $entityType = strtoupper(trim((string)$request->getPost('entity_type', 'string')));
+
+        $startStr = trim((string)$request->getPost('period_start_at'));
+        $endStr = trim((string)$request->getPost('period_end_at'));
+
+        $periodStartAt = strtotime($startStr);
+        $periodEndAt = strtotime($endStr);
+
 
         return new self(
             $userId,
-            (int)$request->getPost('ref_fund_key_id', 'int'),
+            $refFundKeyId,
             $totalValue,
-            $request->getPost('type', 'string'),
-            strtoupper($request->getPost('entity_type', 'string')),
-            $startStr ? strtotime($startStr) : 0,
-            $endStr ? strtotime($endStr) : 0
+            $type,
+            $entityType,
+            $periodStartAt,
+            $periodEndAt
         );
     }
 }
